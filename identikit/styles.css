@@ -1,0 +1,157 @@
+body{
+    background-color: #191E1D;
+    font-family: sans-serif;
+}
+.topbar{
+    background-color: #8197933f;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    color: white;
+}
+/* .sidebar{
+    background-color: #50c2ec;
+    width: 12%;
+    height: 120vh;
+    display: inline-block;
+} */
+.sidebar {
+    background-color: #50c2ec;
+    width: 12%;
+    height: 120vh;
+    display: inline-block;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    margin: 0;
+}
+
+.sidebar ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    border-bottom: 1px solid #666;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: #8197933f;
+}
+.container{
+    display: inline-block;
+    color: white;
+    width: 88%;
+    height: 120vh;
+    background-color: #81979315;
+    vertical-align: top;
+}
+.estop{
+    vertical-align: middle;
+    width: 30px;
+}
+.titulo{
+    margin-left: 670px;
+}
+.video{
+    margin-left: 260px;
+    width: 1000px;
+}
+p{
+    text-align: center;
+}
+.separador{
+    background-color: #8197933f;
+    margin-top: 20px;
+}
+.link{
+    color: white;
+    margin-left: 40px;
+    font-size: larger;
+}
+.ganado{
+    background-color: green;
+}
+.empate{
+    background-color: yellow;
+    color: black;
+}
+.perdido{
+    background-color: red;
+}
+table{
+    margin-left: 300px;
+    text-align: center;
+    border: 1;
+
+}
+th{
+    background-color: #50c2ec;
+}
+.grafias{
+    margin-left: 350px;
+}
+.fixture{
+    text-align: center;
+}
+.musica{
+    display: inline-block;
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 7%;
+    list-style: none;
+
+}
+.menus{
+    font-size: x-large;
+    color: white;
+
+}
+.div_musica{
+    height: 10%;
+    width: 100%;
+    text-align: center;
+
+}
+.div_foto{
+    width: 101px;
+    height: 101px;
+}
+.div_foto img{
+    width: 300px;
+    height: 300px;
+}
+.caja_grande{
+    display: flex;
+    justify-content: space-evenly;
+}
+.foto_musica{
+    width: 500px;
+    height: 500px;
+}
+table tr th a{
+    font-size: xx-large;
+}
+.trivia{
+    width: 1200px;
+    height: 500px;
+    font-size: xx-large;
+}
+h3{
+    text-align: center;
+    font-size: xx-large;
+}
+.gif{
+    margin-left: 600px;
+    width: 500px;
+}
+.foto_trivia{
+    margin-left: 500px;
+}
