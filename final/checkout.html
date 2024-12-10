@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout | Kickers</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="imagenes/logoo.png" alt="Kickers" class="logo-img"></a>
+    </div>
+      <ul class="nav-links">
+        <li><a href="index.html#home">Inicio</a></li>
+        <li><a href="index.html#products">Productos</a></li>
+        <li><a href="contacto.html">Nosotros</a></li>
+      </ul>
+  </header>
+
+  <section class="checkout-container">
+    <h2>Checkout</h2>
+
+    <div class="checkout-cart">
+      <h3>Tu Carrito</h3>
+      <ul id="checkout-cart-items">
+      </ul>
+      <div class="cart-total">
+        <p>Total: $<span id="checkout-total-price">0.00</span></p>
+      </div>
+    </div>
+
+    <div class="payment-form">
+      <h3>Detalles de Pago</h3>
+      <form id="payment-form">
+        <div class="form-group">
+          <label for="card-name">Nombre en la tarjeta</label>
+          <input type="text" id="card-name" name="card-name" required>
+        </div>
+        <div class="form-group">
+          <label for="card-number">Número de tarjeta</label>
+          <input type="text" id="card-number" name="card-number" required>
+        </div>
+        <div class="form-group">
+          <label for="expiry-date">Fecha de vencimiento</label>
+          <input type="month" id="expiry-date" name="expiry-date" required>
+        </div>
+        <div class="form-group">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" name="cvv" required>
+        </div>
+        <button type="submit" class="submit-btn">Pagar</button>
+      </form>
+    </div>
+  </section>
+<br>
+  <footer>
+    <p>&copy; 2024 Kickers. Todos los derechos reservados.</p>
+    <p>Seguinos en nuestras redes</p>
+    <div class="social">
+      <a href=""><img src="imagenes/social-media.png" alt="Imagen 1"></a>
+      <a href=""><img src="imagenes/instagram.png" alt="Imagen 2"></a>
+      <a href=""><img src="imagenes/facebook.png" alt="Imagen 3"></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script src="checkout.js"></script>
+</body>
+</html>

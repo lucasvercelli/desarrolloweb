@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kickers | Calzado de Moda</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <img src="imagenes/logoo.png" alt="Kickers" class="logo-img">
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Inicio</a></li>
+      <li class="dropdown">
+        <a href="#products" id="dropdown-toggle">Productos</a>
+        <ul class="dropdown-menu">
+          <li><a href="#zapatos-deportivos">Nike</a></li>
+          <li><a href="#zapatos-casuales">Adidas</a></li>
+          <li><a href="#zapatos-formales">Vans</a></li>
+          <li><a href="#zapatos-formales">Converse</a></li>
+          <li><a href="#zapatos-formales">Osiris</a></li>
+        </ul>
+      </li>
+      <li><a href="contacto.html">Nosotros</a></li>
+    </ul>
+  </header>
+
+  <div class="slider">
+    <div class="slides">
+      <div class="slide">
+        <img src="imagenes/baner 1.png" alt="Banner 1">
+      </div>
+      <div class="slide">
+        <img src="imagenes/baner 2.png" alt="Banner 2">
+      </div>
+    </div>
+  </div>
+  
+
+<div id="cart-panel" class="cart-panel">
+  <button id="close-cart" class="close-cart">&times;</button>
+  <h2>Productos</h2>
+  <ul id="cart-items"></ul>
+  <div class="cart-total">
+    <p>Total: $<span id="total-price">0.00</span></p>
+  </div>
+  <button id="checkout-button" class="checkout-button">Pagar</button>
+  <button id="clear-cart" class="clear-cart">Vaciar Carrito</button>
+</div>
+
+<div class="cart-icon-container">
+  <img src="imagenes/cart.png" alt="Carrito" class="cart-icon">
+  <span id="cart-count">0</span>
+</div>
+
+  <section id="products" class="products">
+    <div class="product-list">
+      <div class="product-card">
+        <img src="imagenes/Vans Knu Skool A coleção Knu Skool, é uma….jpg" alt="Vans KNU Classic">
+        <h3>Vans KNU Classic</h3>
+        <p class="price">$109.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/adidasGreen.jpg" alt="Adidas Green">
+        <h3>Adidas Green</h3>
+        <p class="price">$129.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/converse.jpg" alt="Converse">
+        <h3>Converse</h3>
+        <p class="price">$149.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/Fila G13 Classic.jpg" alt="Fila G13 Classic">
+        <h3>Fila G13 Classic</h3>
+        <p class="price">$109.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/New Balance green.jpg" alt="New Balance green">
+        <h3>New Balance green</h3>
+        <p class="price">$139.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/vans.jpg" alt="Vans">
+        <h3>Vans</h3>
+        <p class="price">$119.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/Nike green.jpg" alt="Nike green">
+        <h3>Nike green</h3>
+        <p class="price">$159.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/Nike Air Force.jpg" alt="Nike Air Force">
+        <h3>Nike Air Force</h3>
+        <p class="price">$169.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/vansUrban.jpg" alt="Vans Urban">
+        <h3>Vans Urban</h3>
+        <p class="price">$179.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+      <div class="product-card">
+        <img src="imagenes/OsirisD3.jpg" alt="Osiris D3">
+        <h3>Osiris D3</h3>
+        <p class="price">$189.99</p>
+        <button class="add-to-cart">Añadir al Carrito</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2024 Kickers. Todos los derechos reservados.</p>
+    <p>Seguinos en nuestras redes</p>
+    <div class="social">
+      <a href=""><img src="imagenes/social-media.png" alt="Imagen 1"></a>
+      <a href=""><img src="imagenes/instagram.png" alt="Imagen 2"></a>
+      <a href=""><img src="imagenes/facebook.png" alt="Imagen 3"></a>
+  </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

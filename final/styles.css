@@ -1,0 +1,567 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #2c3e50;
+    background-color: #f5f5f5;
+}
+  
+header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a237e;
+    color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+  
+.logo-img {
+    width: 120px;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: #283593;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    list-style: none;
+    padding: 10px 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdown-menu li {
+    padding: 5px 20px;
+}
+
+.dropdown-menu li a {
+    color: #1a237e;
+    font-size: 16px;
+    font-weight: normal;
+    display: block;
+    text-align: left;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-menu li a:hover {
+    background-color: #283593;
+    color: #ffffff;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+.products {
+    padding: 50px 20px;
+    text-align: center;
+}
+  
+.product-list {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+  
+.product-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    margin: 10px;
+    transition: transform 0.3s ease;
+}
+  
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+  
+.product-card img {
+    width: 100%;
+    height: 70%;
+    border-radius: 10px;
+}
+  
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: #283593;
+    margin-top: 10px;
+}
+  
+.add-to-cart {
+    background-color: #1a237e;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background-color 0.3s ease;
+    font-weight: 500;
+}
+  
+.add-to-cart:hover {
+    background-color: #283593;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background-color: #1a237e;
+    color: #ffffff;
+}
+
+.cart-panel {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 350px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+    padding: 20px;
+    border-left: 3px solid #1a237e;
+}
+
+.cart-panel.active {
+    right: 0;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.cart-panel h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.cart-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.cart-panel ul li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.cart-panel .cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 20px;
+    text-align: right;
+}
+
+.cart-panel .clear-cart {
+    width: 100%;
+    background-color: #1a237e;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cart-panel .clear-cart:hover {
+    background-color: #283593;
+}
+
+.checkout-button, .clear-cart {
+    width: 100%;
+    background-color: #1a237e;
+    color: white;
+    padding: 10px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.checkout-button:hover, .clear-cart:hover {
+    background-color: #283593;
+}
+
+.clear-cart {
+    margin-top: 10px;
+}
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-icon-container {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 1100;
+}
+
+.cart-icon {
+    width: 40px;
+    height: auto;
+}
+
+#cart-count {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    background-color: #ffd700;
+    color: #1a237e;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 50%;
+    padding: 2px 6px;
+}
+
+.slider {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    margin: 20px 0;
+}
+
+.slides {
+    display: flex;
+    transition: transform 1s ease-in-out;
+}
+
+.slide {
+    flex: 0 0 100%;
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.payment-form input,
+.payment-form textarea {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.payment-form label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a237e;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fff;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.payment-form input::placeholder,
+.payment-form textarea::placeholder {
+    color: #888;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.payment-form input:focus::placeholder,
+.payment-form textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.payment-form input:focus,
+.payment-form textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.2);
+}
+
+.payment-form input:valid + label,
+.payment-form textarea:valid + label {
+    top: -20px;
+    left: 20px;
+    font-size: 12px;
+    color: #1a237e;
+    font-weight: normal;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 10px 10px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: bold;
+    color: #1a237e;
+    display: block;
+    position: absolute;
+    top: -10px;
+    left: 20px;
+    background-color: #fff;
+    padding: 0 5px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+    opacity: 0.7;
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    z-index: 0;
+}
+
+.form-group input:focus::placeholder,
+.form-group textarea:focus::placeholder {
+    opacity: 0;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: #1a237e;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px rgba(26, 35, 126, 0.2);
+}
+
+.form-group input:valid + label,
+.form-group textarea:valid + label {
+    top: -20px;
+    left: 20px;
+    font-size: 12px;
+    color: #1a237e;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        width: 100px;
+    }
+  
+    .nav-links {
+        display: none;
+    }
+  
+    .search-bar {
+        width: 100%;
+        margin-top: 10px;
+    }
+  
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .product-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+
+    .slider {
+        height: 200px;
+    }
+}
+  
+.contact-container {
+    max-width: 800px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+  
+.contact-container h2 {
+    font-size: 32px;
+    color: #1a237e;
+}
+  
+.contact-container p {
+    font-size: 18px;
+    color: #333;
+    margin-bottom: 20px;
+}
+  
+.brand-description {
+    margin-top: 40px;
+    text-align: center;
+}
+  
+.brand-description h3 {
+    font-size: 24px;
+    color: #1a237e;
+}
+  
+.brand-description p {
+    font-size: 16px;
+    color: #333;
+}
+  
+.map-container {
+    margin-top: 30px;
+    text-align: center;
+}
+  
+.map-container h3 {
+    font-size: 24px;
+    color: #1a237e;
+    margin-bottom: 10px;
+}
+  
+.social img {
+    width: 30px;
+    margin-right: 10px;
+}
+  
+.form-group {
+    position: relative;
+    margin-bottom: 20px;
+}
+  
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    transition: border-color 0.3s;
+}
+  
+input:focus, textarea:focus {
+    border-color: #1a237e;
+    box-shadow: 0 0 0 2px rgba(26, 35, 126, 0.1);
+}
+  
+label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 14px;
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+  
+input:focus + label, textarea:focus + label,
+input:not(:placeholder-shown) + label, textarea:not(:placeholder-shown) + label {
+    top: -10px;
+    left: 10px;
+    font-size: 12px;
+    color: #1a237e;
+}
+  
+.submit-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a237e;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+.submit-btn:hover {
+    background-color: #283593;
+}
+  
+.social {
+    display: flex;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.social img {
+    width: 30px;
+}
